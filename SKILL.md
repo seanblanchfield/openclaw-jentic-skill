@@ -18,13 +18,11 @@ Jentic is an AI agent API middleware platform. It gives OpenClaw agents access t
 
 ## Setup
 
-1. Sign up at [app.jentic.com](https://app.jentic.com) and create an agent
-2. Copy your agent API key (`ak_...`)
-3. Store it in OpenClaw config:
-   ```json
-   { "skills": { "entries": { "jentic": { "apiKey": "ak_your_key_here" } } } }
-   ```
-4. Add per-API credentials for each API at app.jentic.com → Credentials
+1. Create an account at [jentic.com](https://jentic.com)
+2. Build your API registry — browse the API directory and add the APIs you want to use, or upload your own custom API specs
+3. Add credentials to each API as appropriate (OAuth tokens, API keys, etc.)
+4. Click **Live** to create a new agent capability set, then create an associated key (`ak_...`)
+5. Store the key: save the `apiKey` in a `jentic` skill entry in your OpenClaw config
 
 ## The Flow
 
@@ -84,7 +82,7 @@ curl -s -X POST "$BASE/agents/execute" \
 | Situation | Action |
 |---|---|
 | Need an external API capability | `search` first — don't assume the op_id |
-| Execute fails with connection error | Add API credential at app.jentic.com |
+| Execute fails with connection error | Add API credential at jentic.com |
 | API not in scoped results | Try `pub-search` to check the full catalog |
 | `inputs: null` from load | No required inputs — execute with `{}` |
 | Want to browse without a key | `pub-search` works unauthenticated |
@@ -111,7 +109,7 @@ No other endpoints are contacted. API keys for upstream services (Gmail, GitHub,
 | Symptom | Cause | Fix |
 |---|---|---|
 | `Unauthorized` | Bad/missing API key | Check key in OpenClaw config |
-| `RemoteDisconnected` on execute | Missing credential for the API | Add secret at app.jentic.com |
+| `RemoteDisconnected` on execute | Missing credential for the API | Add credential at jentic.com |
 | `success: false` | Bad inputs or upstream error | Check inputs via `load` |
 | Empty search results | API not in agent scope | Try `pub-search` |
 
@@ -119,4 +117,4 @@ No other endpoints are contacted. API keys for upstream services (Gmail, GitHub,
 
 - [Jentic Quickstart](https://docs.jentic.com/getting-started/quickstart/)
 - [Jentic Python SDK](https://github.com/jentic/jentic-sdks)
-- [app.jentic.com](https://app.jentic.com)
+- [jentic.com](https://jentic.com)
