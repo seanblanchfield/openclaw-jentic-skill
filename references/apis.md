@@ -1,6 +1,6 @@
 # Scoped APIs
 
-These 17 APIs are pre-authorised for this agent. Credentials are managed in Jentic (app.jentic.com) — not in this agent.
+These 17 APIs are pre-authorised for this agent. Credentials are managed in Jentic (jentic.com) — not in this agent.
 
 | API | Version | Notes |
 |---|---|---|
@@ -25,6 +25,6 @@ These 17 APIs are pre-authorised for this agent. Credentials are managed in Jent
 ## Credential Status
 
 - **Finnhub** — works without credentials (free public data)
-- **All others** — require API credentials configured at app.jentic.com for this agent
+- **All others** — require API credentials configured at jentic.com for this agent
 
-To add credentials: log in to app.jentic.com → Credentials → add the secret for the API → associate with this agent.
+To add credentials: add credentials via jentic.com.
