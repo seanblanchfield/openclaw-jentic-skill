@@ -20,13 +20,10 @@ chmod +x ~/.openclaw/workspace/scripts/jentic.py
 
 ## Setup
 
-1. Create a Jentic account at [app.jentic.com](https://app.jentic.com)
-2. Create an agent and copy your API key (`ak_...`)
-3. Store it in OpenClaw:
-   ```json
-   { "skills": { "entries": { "jentic": { "apiKey": "ak_your_key_here" } } } }
-   ```
-4. Add credentials for each API you want to call at app.jentic.com → Credentials
+1. Create an account at [jentic.com](https://jentic.com)
+2. Build your API registry — pick APIs from the directory or upload your own, add credentials as needed
+3. Click **Live** to create an agent capability set and generate a key (`ak_...`)
+4. Store the key: save the `apiKey` in a `jentic` skill entry in your OpenClaw config
 
 ## Usage
 
