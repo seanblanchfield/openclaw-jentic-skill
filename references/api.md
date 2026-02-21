@@ -142,7 +142,7 @@ Search the full public catalog. Useful for discovery.
 
 | Error | Cause | Fix |
 |---|---|---|
-| `RemoteDisconnected` | Missing credentials for the API | Add secret at app.jentic.com |
+| `RemoteDisconnected` | Missing credentials for the API | Add secret at jentic.com |
 | `Unauthorized` | Missing or bad `X-JENTIC-API-KEY` | Check key in openclaw config |
 | `success: false, error: "..."` | Bad inputs or upstream API error | Check inputs schema via `/files` |
 | Empty results from `search` | API not in agent scope | Try `pub-search` to confirm it exists |
